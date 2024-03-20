@@ -1,0 +1,1694 @@
+body {
+    height: 100%;
+    width: 100%;
+    min-width: 1440px;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    color: #333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* 导航栏模块开始 */
+.page-header {
+    height: 110px;
+    width: 100%;
+    background: #fff;
+    font-weight: 400;
+}
+
+.header-wapper {
+    height: 110px;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    background: #fff;
+}
+
+.header-content {
+    height: 110px;
+    width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo-link {
+    width: 189px;
+    height: 64.63px;
+}
+
+.header-logo-img {
+    width: 135px;
+    height: 61px;
+    margin-right: 54px;
+}
+
+.header-navigation-container {
+    height: 110px;
+    width: 100%;
+    padding-top: 15px;
+}
+
+
+.header-navigation-top {
+    height: 36px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-search {
+    display: flex;
+    position: relative;
+    width: 756px;
+    height: 100%;
+    color: #909399;
+    background-color: #fff;
+    font-size: 13px;
+}
+
+
+
+.search-inner {
+    width: 688px;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 15px 0 30px;
+    border-radius: 4px 0 0 4px;
+    background: #f5f5f5;
+    color: #909399;
+    border: none;
+    outline: none;
+    font-size: 13px;
+}
+
+.search-inner::placeholder {
+    color: #909399;
+}
+
+/* .search-inner::before {
+    display: inline-block;
+    position: relative;
+    content: "\e778";
+    font-family: element-icons !important;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 36px;
+    background-color: aqua;
+    background: url();
+} */
+.search-prefixed {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    width: 25px;
+    height: 100%;
+    line-height: 36px;
+    text-align: center;
+    color: #c0c4cc;
+}
+
+/* .prefixed-icon {
+    display: block;
+    width: 25px;
+    height: 100%;
+    line-height: 32px;
+    text-align: center;
+} */
+
+.search-prefixed::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url(../img/search-sprite.png) no-repeat -59px -279px;
+    background-size: 104px auto;
+}
+
+.search-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 68px;
+    height: 36px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    color: #909399;
+    background-color: #d8d8d8;
+}
+
+.button-input {
+    width: 68px;
+    height: 36px;
+    line-height: 36px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    color: #909399;
+    font-size: 13px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.button-input:hover {
+    background-color: #0fc700;
+    color: #fff;
+}
+
+.top-user {
+    width: 105px;
+    height: 100%;
+    background-color: #fff;
+}
+
+.user-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 105px;
+    height: 32px;
+    line-height: 32px;
+    background-color: #1e1e1e;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* 下方内容盒子 */
+.header-navigation-bottom {
+    display: flex;
+    justify-content: space-between;
+    height: 59px;
+    width: 100%;
+    line-height: 22px;
+    padding: 19px 0 0 0;
+}
+
+.bottom-zone {
+    display: flex;
+    width: 564px;
+    height: 100%;
+}
+
+.bottom-zone-item {
+    white-space: nowrap;
+    margin-right: 40px;
+    padding-bottom: 18px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    cursor: pointer;
+}
+
+.talents-cloud {
+    white-space: nowrap;
+    margin-right: 0;
+    padding-bottom: 18px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    cursor: pointer;
+}
+
+
+.bottom-zone-img {
+    width: 20px;
+    height: 20px;
+}
+
+.bottom-interaction {
+    display: flex;
+    width: 341px;
+    height: 100%;
+}
+
+.bottom-interaction-item {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    padding-bottom: 18px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #858585;
+}
+
+.item-red-img {
+    width: 17px;
+    height: 20px;
+    line-height: 40px;
+    margin-right: 8px;
+}
+
+.item-social-img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+/* header模块结束 */
+/* banner部分开始 */
+.banner-carousel {
+    position: relative;
+    height: 380px;
+    width: 1920px;
+    background-color: pink;
+    overflow: hidden;
+}
+
+.carousel-container {
+    height: 380px;
+    width: 3840px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: start;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: move 30s ease 10s infinite;
+
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-1920px);
+    }
+
+    40% {
+        transform: translateX(0);
+    }
+
+    60% {
+        transform: translateX(-1920px);
+    }
+
+    80% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(-1920px);
+    }
+}
+
+.carousel-ai-item {
+    display: inline-block;
+    width: 1920px;
+    height: 380px;
+    overflow: hidden;
+}
+
+.carousel-ex-item {
+    display: inline-block;
+    width: 1920px;
+    height: 380px;
+    overflow: hidden;
+}
+
+
+.ai-img,
+.ex-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/banner-ex.png);
+    background-size: 1920px 380px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    padding: 10px 66px;
+}
+
+.ai-img {
+    background-image: url(../img/banner-ai.png);
+}
+
+.ex-img {
+    background-image: url(../img/banner-ex.png);
+}
+
+/* 动态竖条 */
+.carousel-line {
+    position: absolute;
+    bottom: -600px;
+    left: 50%;
+    margin-left: -620px;
+    z-index: 80;
+}
+
+.carousel-line-item {
+    position: relative;
+    width: 15px;
+    height: 200px;
+    display: flex;
+    background-color: hsla(0, 0%, 59.2%, .3);
+    animation: linemove1 3s linear infinite;
+}
+
+.carousel-line-item::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 300px;
+    background-color: hsla(0, 0%, 59.2%, .3);
+    position: absolute;
+    left: -50px;
+    top: -100px;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: linemove1 3s linear infinite;
+}
+
+
+.carousel-line-item::after {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 300px;
+    background-color: hsla(0, 0%, 59.2%, .3);
+    position: absolute;
+    top: -200px;
+    right: -50px;
+    animation: linemove1 3s linear infinite;
+
+}
+
+.carousel-line-behind,
+.carousel-line-behind::before,
+.carousel-line-behind::after {
+    animation: linemove2 3s linear 1s infinite;
+}
+
+@keyframes linemove1 {
+    0% {
+        top: 0
+    }
+
+    100% {
+        top: -780px;
+    }
+}
+
+@keyframes linemove2 {
+    0% {
+        top: 0
+    }
+
+    100% {
+        top: -980px;
+    }
+}
+
+.carousel-float-ads {
+    width: 210px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 55px;
+    right: 50%;
+    margin-right: -620px;
+
+}
+
+.float-ads-pic {
+    display: inline-block;
+    width: 210px;
+    height: 130px;
+    background: url(../img/float-pic.png);
+    background-size: 100% 100%;
+}
+
+/* banner-content部分 */
+.banner-section {
+    position: relative;
+}
+
+.banner-content {
+    width: 210px;
+    height: 360px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -620px;
+}
+
+.menu-item-nav {
+    position: relative;
+    width: 210px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(37, 34, 34, .5);
+    color: #fff;
+    padding-left: 20px;
+    overflow: auto;
+    cursor: pointer;
+}
+
+.content-menu-item:hover {
+    transition: all .5s;
+}
+
+.content-menu-item:hover .menu-item-nav {
+    background-color: rgba(18, 18, 19, 17);
+    cursor: pointer;
+}
+
+.content-menu-item:hover .menu-item-list {
+    display: block;
+    opacity: 1;
+}
+
+.menu-item-name {
+    height: 19px;
+    text-align: center;
+    line-height: 19px;
+    font-size: 14px;
+}
+
+.menu-item-nav::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    content: "";
+    width: 9px;
+    height: 9px;
+    background: url(../img/name-nuxt.svg) no-repeat 0 0;
+    background-size: 9px 9px;
+}
+
+/* menu-item的hover list部分 */
+/* 前端开发部分 */
+.menu-item-list {
+    display: none;
+    position: absolute;
+    left: 210px;
+    top: 0;
+    z-index: 100;
+    width: 722px;
+    height: 360px;
+    min-height: 360px;
+    background: #222;
+}
+
+.menu-catalog-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 722px;
+    height: 288px;
+    padding: 20px 40px;
+}
+
+.menu-catalog-item {
+    width: 722px;
+    height: 64px;
+    margin-bottom: 28px;
+}
+
+.menu-catalog-title {
+    position: relative;
+    height: 20px;
+    margin-bottom: 12px;
+    padding-left: 10px;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.menu-catalog-title::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    margin-right: 10px;
+    background-color: #d8d8d8;
+}
+
+.menu-catalog-courese {
+    height: 32px;
+    display: flex;
+    padding-left: 10px;
+}
+
+.catalog-courese {
+    position: relative;
+    height: 20px;
+    line-height: 20px;
+    margin-right: 20px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.catalog-courese::after {
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+    display: inline-block;
+    content: "";
+    width: 1px;
+    height: 14px;
+    background: #8c8c8c;
+}
+
+.catalog-course-javascript::after,
+.catalog-courese-Node::after,
+.catalog-courese-canvas::after {
+    content: none;
+}
+
+/* 移动端开发部分 */
+.catalog-course-pay::after,
+.catalog-course-react::after {
+    content: none;
+}
+
+/* 后端开发部分 */
+.catalog-course-c::after {
+    content: none;
+}
+
+/* 大数据部分 */
+.catalog-courese-go::after,
+.catalog-course-echarts::after {
+    content: none;
+}
+
+/* 人工智能部分 */
+.catalog-courese-qualcomm::after,
+.catalog-course-caffe::after {
+    content: none;
+}
+
+/* 云计算部分 */
+.catalog-courese-tencent::after {
+    content: none;
+}
+
+/* 物联网/区块链部分 */
+.catalog-courese-thinks::after,
+.catalog-courese-blockchain::after {
+    content: none;
+}
+
+/* 数据库部分 */
+.catalog-courese-SQL::after,
+.catalog-courese-hbase::after {
+    content: none;
+}
+
+/* 产品设计部分 */
+.catalog-courese-axure::after,
+.catalog-courese-web::after {
+    content: none;
+}
+
+/* banner部分结束啦 */
+/* ads部分开始 */
+/* ads-course部分 */
+.ads-course-content {
+    height: 202px;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.ads-container {
+    display: flex;
+    justify-content: space-between;
+    width: 1240px;
+    height: 122px;
+    margin: 0 auto;
+}
+
+.container-course {
+    display: flex;
+    flex-direction: column;
+    width: 925px;
+    height: 122px;
+    background-color: #fff;
+}
+
+.container-course-top,
+.container-course-bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 925px;
+    height: 56px;
+}
+
+.container-course-top {
+    margin-bottom: 10px;
+}
+
+
+.container-course-img {
+    display: inline-block;
+    background-size: 100% 100%;
+}
+
+.course-img {
+    display: inline-block;
+    width: 295px;
+    height: 56px;
+}
+
+.git-img {
+    background: url(../img/git.png) center center / 295px 56px no-repeat rgb(180, 182, 195);
+}
+
+.vue-img {
+    background: url(../img/vue.png) center center / 295px 56px no-repeat rgb(180, 182, 195);
+}
+
+.kafka-img {
+    background: url(../img/kafka.png) center center / 295px 56px no-repeat rgb(180, 182, 195);
+}
+
+.zookeeper-img {
+    background: url(../img/zookeeper.png) center center / 295px 56px no-repeat rgb(180, 182, 195);
+}
+
+.redis-img {
+    background: url(../img/redis.png) center center / 295px 56px no-repeat rgb(180, 182, 195);
+}
+
+.product-img {
+    background: url(../img/product.png) center center / 295px 56px no-repeat rgb(180, 182, 195);
+}
+
+.container-circle {
+    width: 295px;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    margin-left: 20px;
+    height: 122px;
+    background-color: #fff;
+}
+
+.circle-jiker {
+    position: relative;
+    height: 122px;
+    width: 142px;
+}
+
+.circle-jiker-img {
+    display: inline-block;
+    background-size: 100% 100%;
+}
+
+.jiker-img {
+    display: inline-block;
+    width: 142px;
+    height: 122px;
+    background: url(../img/jiker-social.svg) center center / 142px 122px no-repeat rgb(180, 182, 195);
+}
+
+.jiker-active {
+    display: none;
+    position: absolute;
+    width: 160px;
+    height: 205px;
+    overflow: hidden;
+    bottom: 54px;
+    left: -9px;
+    z-index: 300;
+    text-align: center;
+    background: url(../img/nuxt.svg);
+}
+
+.jiker-active-tip {
+    font-size: 11px;
+    padding: 15px 0 6px;
+
+}
+
+.circle-jiker:hover .jiker-active {
+    display: block;
+}
+
+.jiker-active-qr {
+    width: 120px;
+    height: 120px;
+}
+
+.circle-flyletter {
+    position: relative;
+    height: 122px;
+    width: 142px;
+}
+
+.circle-flyletter-img {
+    display: inline-block;
+    background-size: 100% 100%;
+}
+
+.flyletter-img {
+    display: inline-block;
+    width: 142px;
+    height: 122px;
+    background: url(../img/fly-social.png) center center / 142px 122px no-repeat rgb(180, 182, 195);
+}
+
+.flyletter-active {
+    display: none;
+    position: absolute;
+    width: 160px;
+    height: 205px;
+    overflow: hidden;
+    bottom: 54px;
+    left: -9px;
+    z-index: 300;
+    text-align: center;
+    background: url(../img/nuxt.svg);
+}
+
+.flyletter-active-tip {
+    font-size: 11px;
+    padding: 15px 0 6px;
+
+}
+
+.circle-flyletter:hover .flyletter-active {
+    display: block;
+}
+
+.flyletter-active-qr {
+    width: 120px;
+    height: 120px;
+}
+
+/* ads-main部分开始 */
+.ads-seek-content {
+    width: 100%;
+    height: 460px;
+    padding: 40px 0;
+    background-color: #F5F5F5;
+}
+
+.seek-container {
+    display: flex;
+    justify-content: space-between;
+    width: 1240px;
+    height: 380px;
+    margin: 0 auto;
+}
+
+.seek-container-left {
+    width: 295px;
+    height: 380px;
+}
+
+.container-left-img,
+.container-right-img {
+    display: inline-block;
+    background-size: 100% 100%;
+    font-size: 0;
+}
+
+.web-img {
+    display: inline-block;
+    width: 295px;
+    height: 380px;
+    background: url(../img/main-web.png) center center / 295px 380px no-repeat rgb(180, 182, 195)
+}
+
+.seek-container-right {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+    width: 925px;
+    height: 380px;
+
+}
+
+.free-img {
+    display: inline-block;
+    width: 295px;
+    height: 180px;
+    background: url(../img/right-free.png) center center / 295px 180px no-repeat rgb(180, 182, 195);
+}
+
+.python-img {
+    display: inline-block;
+    width: 610px;
+    height: 180px;
+    background: url(../img/right-python.png) center center / 610px 180px no-repeat rgb(180, 182, 195);
+}
+
+.sprog-img {
+    display: block;
+    width: 610px;
+    height: 180px;
+    background: url(../img/right-sprog.png) center center / 610px 180px no-repeat rgb(180, 182, 195);
+}
+
+.vip-img {
+    display: block;
+    width: 295px;
+    height: 180px;
+    background: url(../img/right-vip.png) center center / 295px 180px no-repeat rgb(180, 182, 195);
+}
+
+/* ads-session-info部分开始 */
+.ads-info-content {
+    width: 1920px;
+    height: 220px;
+    background-color: #303738;
+}
+
+.info-container {
+    width: 1440px;
+    height: 220px;
+    margin: 0 auto;
+    background-color: #0fc700;
+}
+
+.info-img {
+    display: inline-block;
+    width: 1440px;
+    height: 220px;
+    background: url(../img/info.png) center center / 1440px 220px no-repeat rgb(180, 182, 195);
+}
+
+/* ads-session-info部分结束 */
+/* ads部分结束 */
+/* career-section开始 */
+.career-section {
+    background-color: #f5f5f5;
+}
+
+.career-content {
+    display: flex;
+    justify-content: space-between;
+    width: 1240px;
+    height: 466px;
+    margin: 0 auto;
+}
+
+.career-actual-container {
+    width: 630px;
+    height: 466px;
+    /* background-color: pink; */
+}
+
+.career-actual-title,
+.career-path-title {
+    display: flex;
+    align-items: center;
+    /* width: 630px; */
+    height: 86px;
+    line-height: 20px;
+    padding: 40px 0 20px;
+}
+
+.actual-title-hd,
+.path-title-hd {
+    /* width: 130px; */
+    height: 26px;
+    line-height: 26px;
+    margin-right: 12px;
+    font-size: 26px;
+    font-weight: 700;
+    color: #333;
+}
+
+.actual-title-bd,
+.path-title-bd {
+    /* width: 378px; */
+    height: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #666;
+}
+
+.actual-title-ft,
+.path-title-ft {
+    width: 26px;
+    height: 16px;
+    display: flex;
+    justify-content: end;
+}
+
+.title-ft-img {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../img/actual-title.svg) center center / 16px 16px no-repeat;
+}
+
+.career-actual-practive {
+    width: 630px;
+    height: 360px;
+    display: flex;
+    /* background-color: #fff; */
+}
+
+/* 数据分析实战营和重构实战营部分 */
+.actual-practive-data,
+.actual-practive-refactoring {
+    display: inline-block;
+    width: 295px;
+    height: 360px;
+    margin-right: 20px;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.practive-data-hd,
+.practive-refactoring-hd {
+    width: 295px;
+    height: 170px;
+    display: flex;
+    padding: 20px 25px;
+    background: url(../img/actual-data.png) center center / 295px 170px no-repeat rgb(180, 182, 195);
+}
+
+.practive-refactoring-hd {
+    background: url(../img/actual-refactoring.png) center center / 295px 170px no-repeat rgb(180, 182, 195);
+}
+
+.data-hd-tip,
+.refactoring-hd-tip {
+    display: inline-block;
+    width: 95px;
+    height: 30px;
+    margin-bottom: 30px;
+    background: url(../img/data-hd-tip.svg);
+}
+
+.practive-data-ft,
+.practive-refactoring-ft {
+    width: 295px;
+    height: 190px;
+    padding: 17px 25px 30px;
+}
+
+.data-ft-time,
+.refactoring-ft-time {
+    display: flex;
+    width: 245px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.ft-time-tip {
+    display: flex;
+    align-items: center;
+}
+
+.time-tip-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    background: url(../img/time-tip-icon.svg) no-repeat;
+}
+
+.ft-time-separate {
+    display: inline-block;
+    transform: rotate(90deg);
+    margin-left: 10px;
+    color: #999;
+}
+
+.ft-time-day {
+    display: flex;
+    align-items: center;
+}
+
+.data-ft-description,
+.refactoring-ft-description {
+    height: 60px;
+    margin: 13px 0 18px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #999;
+}
+
+.data-ft-job,
+.refactoring-ft-job {
+    width: 245px;
+    height: 32px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
+
+.ft-job-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    background: url(../img/ft-job-icon.svg) no-repeat;
+}
+
+/* 路径模块 */
+.career-path-container {
+    width: 610px;
+    height: 466px;
+    /* background-color: pink; */
+}
+
+.career-path-sort {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+    width: 610px;
+    height: 360px;
+}
+
+.path-sort-item {
+    width: 295px;
+    height: 170px;
+    background: url(../img/python.png) center center / 295px 170px no-repeat rgb(180, 182, 195);
+}
+
+.path-sort-business {
+    background: url(../img/business.png) center center / 295px 170px no-repeat rgb(180, 182, 195);
+}
+
+.path-sort-web {
+    background: url(../img/web.png) center center / 295px 170px no-repeat rgb(180, 182, 195);
+}
+
+.path-sort-java {
+    background: url(../img/java.png) center center / 295px 170px no-repeat rgb(180, 182, 195);
+}
+
+/* career-section结束 */
+/* course-section开始 */
+.course-section {
+    width: 100%;
+    /* 需要背景颜色所以加40px高 用padding值平衡 */
+    height: 2125px;
+    padding-bottom: 40px;
+    background-color: #f5f5f5;
+}
+
+.course-content {
+    width: 1240px;
+    height: 2085px;
+    margin: 0 auto;
+    /* padding: 0 100px; */
+    /* background-color: #0fc700; */
+}
+
+.course-title-container {
+    display: flex;
+    align-items: center;
+    width: 1240px;
+    height: 86px;
+    line-height: 20px;
+    padding: 40px 0 20px;
+    /* background-color: #fff; */
+}
+
+.course-title-hd {
+    margin-right: 12px;
+    font-weight: 700;
+    line-height: 26px;
+    font-size: 26px;
+    color: #333;
+}
+
+.course-title-bd {
+    width: 1022px;
+    height: 21px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    /* background-color: #0fc700; */
+}
+
+.title-bd-item {
+    height: 21px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.title-bd-item:hover .title-bd-text {
+    color: #0fc700;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.title-bd-text {
+    font-size: 14px;
+    color: #666;
+}
+
+.fance {
+    display: inline-block;
+    margin: 0 6px;
+    font-weight: 700;
+    font-size: 12px;
+    transform: rotate(-8deg);
+    line-height: 21px;
+    color: #0fc700;
+}
+
+.course-title-ft {
+    width: 82px;
+    height: 20px;
+    font-size: 14px;
+    color: #666;
+    line-height: 20px;
+}
+
+.title-ft-more {
+    display: inline-block;
+    width: 82px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    color: #999;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.ft-more-icon {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    margin-left: 10px;
+    background: url(../img/actual-title.svg) no-repeat;
+}
+
+/* course-list部分 */
+.course-list-container {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+    width: 1240px;
+    height: 1915px;
+}
+
+.course-item {
+    display: inline-block;
+    width: 295px;
+    height: 359px;
+    margin-bottom: 30px;
+    background-color: #fff;
+}
+
+.card-course-top {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 295px;
+    height: 170px;
+    background: url(../img/card-course-secure.png) center center / 295px 170px no-repeat rgb(180, 182, 195);
+}
+
+.card-course-kotlin {
+    background: url(../img/card-course-kotlin.png) center center / 295px 170px no-repeat rgb(180, 182, 195);
+}
+
+.card-course-nn {
+    background: url(../img/card-course-nn.png) center center / 295px 170px no-repeat rgb(180, 182, 195);
+}
+
+.card-course-github {
+    background: url(../img/card-course-github.png) center center / 295px 170px no-repeat rgb(180, 182, 195);
+}
+
+.card-course-develop {
+    background: url(../img/card-course-develop.png) center center / 295px 170px no-repeat rgb(180, 182, 195);
+}
+
+.card-course-w3c {
+    background: url(../img/card-course-w3c.png) center center / 295px 170px no-repeat rgb(180, 182, 195);
+}
+
+.card-course-api {
+    background: url(../img/card-course-api.png) center center / 295px 170px no-repeat rgb(180, 182, 195);
+}
+
+.card-course-framework {
+    background: url(../img/card-course-framework.png) center center / 295px 170px no-repeat rgb(180, 182, 195);
+}
+
+.card-course-vue {
+    background: url(../img/card-course-vue.png) center center / 295px 170px no-repeat rgb(180, 182, 195);
+}
+
+.card-course-javascript {
+    background: url(../img/card-course-javascript.png) center center / 295px 170px no-repeat rgb(180, 182, 195);
+}
+
+.card-course-css {
+    background: url(../img/card-course-css.png) center center / 295px 170px no-repeat rgb(180, 182, 195);
+}
+
+.card-course-language {
+    background: url(../img/card-course-language.png) center center / 295px 170px no-repeat rgb(180, 182, 195);
+}
+
+.card-course-android-number {
+    background: url(../img/card-course-android-number.png) center center / 295px 170px no-repeat rgb(180, 182, 195);
+}
+
+
+
+.card-course-android {
+    background: url(../img/card-course-android.png) center center / 295px 170px no-repeat rgb(180, 182, 195);
+}
+
+.card-course-kotlin-ex {
+    background: url(../img/card-course-kotlin-ex.png) center center / 295px 170px no-repeat rgb(180, 182, 195);
+}
+
+.card-course-android-custom {
+    background: url(../img/card-course-android-custom.png) center center / 295px 170px no-repeat rgb(180, 182, 195);
+}
+
+.card-course-rxjava {
+    background: url(../img/card-course-rxjava.png) center center / 295px 170px no-repeat rgb(180, 182, 195);
+}
+
+.card-course-android-layout {
+    background: url(../img/card-course-android-layout.png) center center / 295px 170px no-repeat rgb(180, 182, 195);
+}
+
+.card-course-android-studio {
+    background: url(../img/card-course-android-studio.png) center center / 295px 170px no-repeat rgb(180, 182, 195);
+}
+
+.card-course-android-person {
+    background: url(../img/card-course-android-person.png) center center / 295px 170px no-repeat rgb(180, 182, 195);
+}
+
+.course-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 144px;
+    height: 44px;
+    line-height: 35px;
+    margin: 40px auto 0;
+    border: 1px solid #999;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+}
+
+.course-more-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+    background: url(../img/actual-title.svg) no-repeat;
+}
+
+.course-more:hover {
+    opacity: 0.8;
+}
+
+.card-course-tag {
+    width: 44px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    border-radius: 0 0 11px;
+    color: #fff;
+    background-color: #0fc700;
+}
+
+.card-course-level {
+    width: 45px;
+    height: 28px;
+    margin-right: 10px;
+    background: url(../img/level-primary.svg);
+}
+
+.card-course-bottom {
+    width: 295px;
+    height: 185px;
+    padding: 15px 20px 20px 25px;
+}
+
+.card-course-title {
+    height: 56px;
+    margin-bottom: 4px;
+    overflow: hidden;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    color: #333;
+}
+
+.card-course-describe {
+    height: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #666;
+}
+
+.card-course-info {
+    font-size: 0;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+    font-size: 13px;
+    color: #999;
+
+}
+
+.info-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    background: url(../img/info-time.svg) no-repeat;
+}
+
+.info-separate {
+    display: inline-block;
+    height: 20px;
+    width: 9.53px;
+    transform: rotate(90deg);
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.card-course-price {
+    height: 32px;
+    margin-top: 10px;
+    display: flex;
+    align-items: flex-end;
+    font-size: 16px;
+    line-height: 32px;
+    color: #ff4000;
+}
+
+.price-label {
+    font-size: 14px;
+    color: #ff4000;
+    line-height: 20px;
+}
+
+.price-current {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ff4000;
+    line-height: 24px;
+}
+
+.price-original {
+    font-size: 14px;
+    margin-left: 8px;
+    line-height: 20px;
+    font-weight: 600;
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* course-section结束 */
+/* page-main部分结束 */
+/* footer-section部分开始 */
+.footer-wapper {
+    height: 450px;
+    text-align: center;
+    padding: 50px 100px 57px;
+    font-weight: 400;
+    background-color: #252222;
+}
+
+.footer-content {
+    width: 1240px;
+    height: 343px;
+    margin: 0 auto;
+}
+
+.footer-top-content {
+    display: flex;
+    align-items: flex-start;
+    height: 291px;
+    padding-bottom: 34px;
+    border-bottom: 1px solid #414141;
+}
+
+.footer-logo-container {
+    text-align: left;
+    margin-right: 128px;
+}
+
+.footer-logo-link {
+    display: inline-block;
+    width: 156px;
+    height: 70px;
+    margin-bottom: 17px;
+    background: url(../img/footer-logo.svg) center center / 156px 70px no-repeat;
+}
+
+.footer-logo-desc {
+    width: 156px;
+    height: 17px;
+    line-height: 17px;
+    font-size: 12px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    color: #bbb;
+}
+
+.footer-phone-title {
+    width: 156px;
+    height: 22px;
+    text-align: left;
+    line-height: 22px;
+    margin-bottom: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.footer-phone-number {
+    width: 156px;
+    height: 28px;
+    text-align: left;
+    line-height: 28px;
+    margin-bottom: 11px;
+    font-size: 20px;
+    color: #d5d5d5;
+}
+
+.footer-contact-button {
+    display: inline-block;
+    width: 144px;
+    height: 43px;
+    line-height: 43px;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    background-color: #333;
+    transition: .2s ease;
+}
+
+.footer-contact-button:hover {
+    background-color: #555;
+}
+
+.footer-comprehensive-container {
+    width: 188px;
+    height: 210px;
+    /* display: flex;
+    flex-direction: column; */
+    margin-right: 60px;
+}
+
+.footer-comprehensive-list {
+    display: flex;
+    /* flex-direction: row; */
+    width: 188px;
+    height: 22px;
+    margin-bottom: 20px;
+}
+
+.comprehensive-item-title {
+    height: 22px;
+    line-height: 22px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    margin-right: 20px;
+}
+
+.comprehensive-item-text {
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #d5d5d5;
+    margin-right: 12px;
+}
+
+.footer-cooperate-container {
+    width: 383px;
+    height: 122px;
+    margin-right: 54px;
+}
+
+.footer-cooperate-title {
+    height: 22px;
+    line-height: 22px;
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-cooperate-logos {
+    width: 383px;
+    height: 90px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cooperate-logos-names {
+    display: inline-block;
+    height: 25px;
+    width: auto;
+    margin-bottom: 5px;
+}
+
+.footer-serve-container {
+    width: 144px;
+    height: 225px;
+    text-align: left;
+}
+
+.footer-serve-title {
+    height: 22px;
+    line-height: 22px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-serve-button {
+    display: inline-block;
+    width: 144px;
+    height: 43px;
+    margin-bottom: 8px;
+    text-align: center;
+    line-height: 43px;
+    font-size: 12px;
+    background-color: #333;
+    color: #fff;
+    transition: .2s ease;
+}
+
+.footer-serve-button::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    width: 18px;
+    height: 15px;
+    margin-right: 10px;
+    background: url(../img/cooperate-img/enterprice-icon.svg) center center / 18px 15px no-repeat;
+}
+
+.serve-button-college::before {
+    background: url(../img/cooperate-img/college-icon.svg) center center / 18px 15px no-repeat;
+}
+
+.footer-serve-button:hover {
+    background-color: #555;
+}
+
+.footer-serve-tip {
+    height: 34px;
+    line-height: 17px;
+    font-size: 12px;
+    margin-bottom: 20px;
+    color: #d5d5d5;
+}
+
+.footer-bottom-content {
+    width: 1240px;
+    height: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.footer-social-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-social-weibo,
+.footer-social-twitter,
+.footer-social-github {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 25px;
+    background: url(../img/cooperate-img/weibo.svg) 0 0 no-repeat;
+}
+
+.footer-social-twitter {
+    background: url(../img/cooperate-img/twitter.svg) 0 0 no-repeat;
+}
+
+.footer-social-github {
+    background: url(../img/cooperate-img/github.svg) 0 0 no-repeat;
+}
+
+.footer-copyright-container {
+    height: 17px;
+    line-height: 17px;
+    font-size: 12px;
+    font-weight: 300;
+    color: #8e8e8e;
+}
+
+.footer-copyright-government {
+    color: #8e8e8e;
+}
